@@ -1,0 +1,376 @@
+<?xml version='1.0' encoding='utf-8'?>
+<MixxxControllerPreset schemaVersion="1" mixxxVersion="2.0.0+">
+    <info>
+        <name>Pioneer DDJ-200</name>
+        <author>Dan Giddis</author>
+        <description>Pioneer DDJ-200 configuration for 2 decks.</description>
+    </info>
+    <controller id="DDJ-200">
+        <scriptfiles>
+            <file functionprefix="PioneerDDJSB" filename="Pioneer-DDJ-SB-scripts.js"/>
+        </scriptfiles>
+        <controls>
+            <control>
+                <group>[Channel1]</group>
+                <key>volume</key>
+                <description>MIDI Learned from 6342 messages.</description>
+                <status>0xB0</status>
+                <midino>0x13</midino>
+                <options>
+                    <fourteen-bit-msb/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
+                <key>parameter2</key>
+                <description>MIDI Learned from 540 messages.</description>
+                <status>0xB1</status>
+                <midino>0x2B</midino>
+                <options>
+                    <fourteen-bit-lsb/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>parameter2</key>
+                <description>MIDI Learned from 624 messages.</description>
+                <status>0xB0</status>
+                <midino>0x2B</midino>
+                <options>
+                    <fourteen-bit-lsb/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>beatloop_0.5_toggle</key>
+                <description>MIDI Learned from 1 messages.</description>
+                <status>0x97</status>
+                <midino>0x01</midino>
+                <options>
+                    <switch/>
+                </options>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit1_Effect1]</group>
+                <key>enabled</key>
+                <description>MIDI Learned from 2 messages.</description>
+                <status>0x97</status>
+                <midino>0x00</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>rate</key>
+                <description>MIDI Learned from 1352 messages.</description>
+                <status>0xB1</status>
+                <midino>0x00</midino>
+                <options>
+                    <fourteen-bit-msb/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>rate</key>
+                <description>MIDI Learned from 920 messages.</description>
+                <status>0xB0</status>
+                <midino>0x00</midino>
+                <options>
+                    <fourteen-bit-msb/>
+                </options>
+            </control>
+            <control>
+                <group>[Master]</group>
+                <key>crossfader_set_default</key>
+                <description>MIDI Learned from 22812 messages.</description>
+                <status>0xB6</status>
+                <midino>0x3F</midino>
+                <options>
+                    <fourteen-bit-lsb/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
+                <key>parameter1</key>
+                <description>MIDI Learned from 512 messages.</description>
+                <status>0xB1</status>
+                <midino>0x0F</midino>
+                <options>
+                    <fourteen-bit-msb/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>beatloop_1_toggle</key>
+                <description>MIDI Learned from 2 messages.</description>
+                <status>0x97</status>
+                <midino>0x02</midino>
+                <options>
+                    <switch/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>parameter1</key>
+                <description>MIDI Learned from 2486 messages.</description>
+                <status>0xB0</status>
+                <midino>0x0F</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
+                <key>parameter3</key>
+                <description>MIDI Learned from 392 messages.</description>
+                <status>0xB1</status>
+                <midino>0x27</midino>
+                <options>
+                    <fourteen-bit-lsb/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>cue_default</key>
+                <description>MIDI Learned from 6 messages.</description>
+                <status>0x91</status>
+                <midino>0x0C</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>parameter3</key>
+                <description>MIDI Learned from 364 messages.</description>
+                <status>0xB0</status>
+                <midino>0x27</midino>
+                <options>
+                    <fourteen-bit-lsb/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>volume</key>
+                <description>MIDI Learned from 5984 messages.</description>
+                <status>0xB1</status>
+                <midino>0x33</midino>
+                <options>
+                    <fourteen-bit-lsb/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>cue_default</key>
+                <description>MIDI Learned from 2 messages.</description>
+                <status>0x90</status>
+                <midino>0x0C</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>volume</key>
+                <description>MIDI Learned from 6342 messages.</description>
+                <status>0xB0</status>
+                <midino>0x33</midino>
+                <options>
+                    <fourteen-bit-lsb/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>beatloop_0.5_toggle</key>
+                <description>MIDI Learned from 3 messages.</description>
+                <status>0x99</status>
+                <midino>0x01</midino>
+                <options>
+                    <switch/>
+                </options>
+            </control>
+            <control>
+                <group>[QuickEffectRack1_[Channel1]]</group>
+                <key>super1</key>
+                <description>MIDI Learned from 1640 messages.</description>
+                <status>0xB6</status>
+                <midino>0x17</midino>
+                <options>
+                    <fourteen-bit-msb/>
+                </options>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit2_Effect1]</group>
+                <key>enabled</key>
+                <description>MIDI Learned from 4 messages.</description>
+                <status>0x99</status>
+                <midino>0x00</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>rate</key>
+                <description>MIDI Learned from 1352 messages.</description>
+                <status>0xB1</status>
+                <midino>0x20</midino>
+                <options>
+                    <fourteen-bit-lsb/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>bpm_tap</key>
+                <description>MIDI Learned from 4 messages.</description>
+                <status>0x90</status>
+                <midino>0x58</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>rate</key>
+                <description>MIDI Learned from 920 messages.</description>
+                <status>0xB0</status>
+                <midino>0x20</midino>
+                <options>
+                    <fourteen-bit-lsb/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
+                <key>parameter2</key>
+                <description>MIDI Learned from 540 messages.</description>
+                <status>0xB1</status>
+                <midino>0x0B</midino>
+                <options>
+                    <fourteen-bit-msb/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>parameter2</key>
+                <description>MIDI Learned from 624 messages.</description>
+                <status>0xB0</status>
+                <midino>0x0B</midino>
+                <options>
+                    <fourteen-bit-msb/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
+                <key>parameter1</key>
+                <description>MIDI Learned from 512 messages.</description>
+                <status>0xB1</status>
+                <midino>0x2F</midino>
+                <options>
+                    <fourteen-bit-lsb/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>beatloop_1_toggle</key>
+                <description>MIDI Learned from 4 messages.</description>
+                <status>0x99</status>
+                <midino>0x02</midino>
+                <options>
+                    <switch/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>play</key>
+                <description>MIDI Learned from 8 messages.</description>
+                <status>0x91</status>
+                <midino>0x0B</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>play</key>
+                <description>MIDI Learned from 4 messages.</description>
+                <status>0x90</status>
+                <midino>0x0B</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>rate</key>
+                <description>MIDI Learned from 40 messages.</description>
+                <status>0x96</status>
+                <midino>0x63</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>pfl</key>
+                <description>MIDI Learned from 36 messages.</description>
+                <status>0x91</status>
+                <midino>0x54</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>pfl</key>
+                <description>MIDI Learned from 34 messages.</description>
+                <status>0x90</status>
+                <midino>0x54</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[QuickEffectRack1_[Channel1]]</group>
+                <key>super1</key>
+                <description>MIDI Learned from 1640 messages.</description>
+                <status>0xB6</status>
+                <midino>0x37</midino>
+                <options>
+                    <fourteen-bit-lsb/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
+                <key>parameter3</key>
+                <description>MIDI Learned from 392 messages.</description>
+                <status>0xB1</status>
+                <midino>0x07</midino>
+                <options>
+                    <fourteen-bit-msb/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>volume</key>
+                <description>MIDI Learned from 5984 messages.</description>
+                <status>0xB1</status>
+                <midino>0x13</midino>
+                <options>
+                    <fourteen-bit-msb/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>parameter3</key>
+                <description>MIDI Learned from 364 messages.</description>
+                <status>0xB0</status>
+                <midino>0x07</midino>
+                <options>
+                    <fourteen-bit-msb/>
+                </options>
+            </control>
+        </controls>
+        <outputs/>
+    </controller>
+</MixxxControllerPreset>
