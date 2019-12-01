@@ -25,7 +25,7 @@
                 <key>DDJ200.scratch</key>
                 <description>Channel 1 scratch.</description>
                 <status>0xB0</status>
-                <midino>0x23</midino>
+                <midino>0x22</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -55,7 +55,7 @@
                 <key>DDJ200.scratch</key>
                 <description>Channel 2 scratch.</description>
                 <status>0xB1</status>
-                <midino>0x23</midino>
+                <midino>0x22</midino>
                 <options>
                     <script-binding/>
                 </options>
