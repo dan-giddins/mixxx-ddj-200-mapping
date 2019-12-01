@@ -2,14 +2,54 @@
 <MixxxControllerPreset schemaVersion="1" mixxxVersion="2.0.0+">
     <info>
         <name>Pioneer DDJ-200</name>
-        <author>Dan Giddis</author>
+        <author>Dan Giddins</author>
         <description>Pioneer DDJ-200 configuration for 2 decks.</description>
     </info>
     <controller id="DDJ-200">
         <scriptfiles>
-            <file functionprefix="PioneerDDJSB" filename="Pioneer-DDJ-SB-scripts.js"/>
+            <file functionprefix="DDJ200" filename="Pioneer-DDJ-200-scripts.js"/>
         </scriptfiles>
         <controls>
+            <control>
+                <group>[Channel1]</group>
+                <key>DDJ200.scratch</key>
+                <description>Channel 1 scratch.</description>
+                <status>0xB0</status>
+                <midino>0x23</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>DDJ200.jog</key>
+                <description>Channel 1 jog.</description>
+                <status>0xB0</status>
+                <midino>0x21</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>DDJ200.scratch</key>
+                <description>Channel 2 scratch.</description>
+                <status>0xB1</status>
+                <midino>0x23</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>DDJ200.jog</key>
+                <description>Channel 2 jog.</description>
+                <status>0xB1</status>
+                <midino>0x21</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
             <control>
                 <group>[EqualizerRack1_[Channel2]_Effect1]</group>
                 <key>parameter3</key>
