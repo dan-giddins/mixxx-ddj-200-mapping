@@ -17,7 +17,7 @@
                 <status>0xB0</status>
                 <midino>0x23</midino>
                 <options>
-                    <normal/>
+                    <Script-Binding/>
                 </options>
             </control>
             <control>
@@ -27,7 +27,7 @@
                 <status>0xB0</status>
                 <midino>0x21</midino>
                 <options>
-                    <normal/>
+                    <Script-Binding/>
                 </options>
             </control>
             <control>
@@ -37,7 +37,7 @@
                 <status>0xB1</status>
                 <midino>0x23</midino>
                 <options>
-                    <normal/>
+                    <Script-Binding/>
                 </options>
             </control>
             <control>
@@ -47,7 +47,7 @@
                 <status>0xB1</status>
                 <midino>0x21</midino>
                 <options>
-                    <normal/>
+                    <Script-Binding/>
                 </options>
             </control>
             <control>
