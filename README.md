@@ -3,6 +3,7 @@
 A mapping for the Pioneer DDJ-200 for the open source DJ software MIXXX (https://www.mixxx.org/)
 
 status -> status
+
 ctrl -> midino
 
 1 scratch left:     status 0xB0 (ch 1, opcode 0xB), ctrl 0x23, val 0x3F
