@@ -11,6 +11,26 @@
         </scriptfiles>
         <controls>
             <control>
+                <group>[Channel1]</group>
+                <key>DDJ200.touch</key>
+                <description>Channel 1 touch.</description>
+                <status>0x90</status>
+                <midino>0x36</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>DDJ200.touch</key>
+                <description>Channel 2 touch.</description>
+                <status>0x91</status>
+                <midino>0x36</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
                 <group>[EffectRack1_EffectUnit1_Effect1]</group>
                 <key>enabled</key>
                 <status>0x97</status>
