@@ -11,95 +11,30 @@
         </scriptfiles>
         <controls>
             <control>
-                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
-                <key>parameter2</key>
-                <status>0xB1</status>
-                <midino>0x2B</midino>
+                <group>[EffectRack1_EffectUnit1_Effect1]</group>
+                <key>enabled</key>
+                <status>0x97</status>
+                <midino>0x04</midino>
                 <options>
-                    <fourteen-bit-lsb/>
+                    <normal/>
                 </options>
             </control>
             <control>
-                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
                 <key>parameter1</key>
-                <status>0xB0</status>
+                <status>0xB1</status>
                 <midino>0x0F</midino>
                 <options>
-                    <normal/>
+                    <fourteen-bit-msb/>
                 </options>
             </control>
             <control>
-                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
-                <key>parameter2</key>
-                <status>0xB0</status>
-                <midino>0x2B</midino>
+                <group>[QuickEffectRack1_[Channel2]]</group>
+                <key>super1</key>
+                <status>0xB6</status>
+                <midino>0x38</midino>
                 <options>
                     <fourteen-bit-lsb/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>rate</key>
-                <status>0xB1</status>
-                <midino>0x20</midino>
-                <options>
-                    <fourteen-bit-lsb/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>rate</key>
-                <status>0xB0</status>
-                <midino>0x20</midino>
-                <options>
-                    <fourteen-bit-lsb/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>beatlooproll_1_activate</key>
-                <status>0x99</status>
-                <midino>0x02</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>beatlooproll_0.5_activate</key>
-                <status>0x97</status>
-                <midino>0x01</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>DDJ200.jog</key>
-                <description>Channel 2 jog.</description>
-                <status>0xB1</status>
-                <midino>0x21</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>DDJ200.jog</key>
-                <description>Channel 1 jog.</description>
-                <status>0xB0</status>
-                <midino>0x21</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>beatlooproll_2_activate</key>
-                <status>0x99</status>
-                <midino>0x03</midino>
-                <options>
-                    <normal/>
                 </options>
             </control>
             <control>
@@ -121,51 +56,6 @@
                 </options>
             </control>
             <control>
-                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
-                <key>parameter2</key>
-                <status>0xB1</status>
-                <midino>0x0B</midino>
-                <options>
-                    <fourteen-bit-msb/>
-                </options>
-            </control>
-            <control>
-                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
-                <key>parameter2</key>
-                <status>0xB0</status>
-                <midino>0x0B</midino>
-                <options>
-                    <fourteen-bit-msb/>
-                </options>
-            </control>
-            <control>
-                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
-                <key>parameter3</key>
-                <status>0xB1</status>
-                <midino>0x27</midino>
-                <options>
-                    <fourteen-bit-lsb/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>rate</key>
-                <status>0xB1</status>
-                <midino>0x00</midino>
-                <options>
-                    <fourteen-bit-msb/>
-                </options>
-            </control>
-            <control>
-                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
-                <key>parameter3</key>
-                <status>0xB0</status>
-                <midino>0x27</midino>
-                <options>
-                    <fourteen-bit-lsb/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel1]</group>
                 <key>rate</key>
                 <status>0xB0</status>
@@ -176,184 +66,11 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>DDJ200.scratch</key>
-                <description>Channel 2 scratch.</description>
+                <key>rate</key>
                 <status>0xB1</status>
-                <midino>0x22</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>DDJ200.scratch</key>
-                <description>Channel 1 scratch.</description>
-                <status>0xB0</status>
-                <midino>0x22</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[EffectRack1_EffectUnit2_Effect1]</group>
-                <key>enabled</key>
-                <status>0x99</status>
-                <midino>0x04</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[QuickEffectRack1_[Channel2]]</group>
-                <key>super1</key>
-                <status>0xB6</status>
-                <midino>0x38</midino>
-                <options>
-                    <fourteen-bit-lsb/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>volume</key>
-                <status>0xB1</status>
-                <midino>0x33</midino>
-                <options>
-                    <fourteen-bit-lsb/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>beatlooproll_2_activate</key>
-                <status>0x97</status>
-                <midino>0x03</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>volume</key>
-                <status>0xB0</status>
-                <midino>0x33</midino>
-                <options>
-                    <fourteen-bit-lsb/>
-                </options>
-            </control>
-            <control>
-                <group>[QuickEffectRack1_[Channel1]]</group>
-                <key>super1</key>
-                <status>0xB6</status>
-                <midino>0x17</midino>
-                <options>
-                    <fourteen-bit-msb/>
-                </options>
-            </control>
-            <control>
-                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
-                <key>parameter3</key>
-                <status>0xB1</status>
-                <midino>0x07</midino>
-                <options>
-                    <fourteen-bit-msb/>
-                </options>
-            </control>
-            <control>
-                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
-                <key>parameter3</key>
-                <status>0xB0</status>
-                <midino>0x07</midino>
-                <options>
-                    <fourteen-bit-msb/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>sync_enabled</key>
-                <status>0x91</status>
-                <midino>0x58</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>sync_enabled</key>
-                <status>0x90</status>
-                <midino>0x58</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[EffectRack1_EffectUnit2_Effect2]</group>
-                <key>enabled</key>
-                <status>0x99</status>
-                <midino>0x05</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[EffectRack1_EffectUnit1_Effect1]</group>
-                <key>enabled</key>
-                <status>0x97</status>
-                <midino>0x04</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Master]</group>
-                <key>crossfader</key>
-                <status>0xB6</status>
-                <midino>0x3F</midino>
-                <options>
-                    <fourteen-bit-lsb/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>volume</key>
-                <status>0xB1</status>
-                <midino>0x13</midino>
-                <options>
-                    <fourteen-bit-msb/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>beatlooproll_0.25_activate</key>
-                <status>0x99</status>
                 <midino>0x00</midino>
                 <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[QuickEffectRack1_[Channel2]]</group>
-                <key>super1</key>
-                <status>0xB6</status>
-                <midino>0x18</midino>
-                <options>
                     <fourteen-bit-msb/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>volume</key>
-                <status>0xB0</status>
-                <midino>0x13</midino>
-                <options>
-                    <fourteen-bit-msb/>
-                </options>
-            </control>
-            <control>
-                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
-                <key>parameter1</key>
-                <status>0xB1</status>
-                <midino>0x2F</midino>
-                <options>
-                    <fourteen-bit-lsb/>
                 </options>
             </control>
             <control>
@@ -366,12 +83,32 @@
                 </options>
             </control>
             <control>
-                <group>[Channel2]</group>
-                <key>play</key>
-                <status>0x91</status>
-                <midino>0x0B</midino>
+                <group>[Channel1]</group>
+                <key>DDJ200.jog</key>
+                <description>Channel 1 jog.</description>
+                <status>0xB0</status>
+                <midino>0x21</midino>
                 <options>
-                    <normal/>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>DDJ200.jog</key>
+                <description>Channel 2 jog.</description>
+                <status>0xB1</status>
+                <midino>0x21</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Master]</group>
+                <key>crossfader</key>
+                <status>0xB6</status>
+                <midino>0x1F</midino>
+                <options>
+                    <fourteen-bit-msb/>
                 </options>
             </control>
             <control>
@@ -384,28 +121,28 @@
                 </options>
             </control>
             <control>
-                <group>[EffectRack1_EffectUnit1_Effect2]</group>
-                <key>enabled</key>
-                <status>0x97</status>
-                <midino>0x05</midino>
+                <group>[Channel2]</group>
+                <key>play</key>
+                <status>0x91</status>
+                <midino>0x0B</midino>
                 <options>
                     <normal/>
                 </options>
             </control>
             <control>
-                <group>[Channel2]</group>
-                <key>pfl</key>
-                <status>0x91</status>
-                <midino>0x54</midino>
+                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
+                <key>parameter1</key>
+                <status>0xB1</status>
+                <midino>0x2F</midino>
                 <options>
-                    <normal/>
+                    <fourteen-bit-lsb/>
                 </options>
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>pfl</key>
+                <key>cue_default</key>
                 <status>0x90</status>
-                <midino>0x54</midino>
+                <midino>0x0C</midino>
                 <options>
                     <normal/>
                 </options>
@@ -420,24 +157,6 @@
                 </options>
             </control>
             <control>
-                <group>[Channel1]</group>
-                <key>beatlooproll_0.25_activate</key>
-                <status>0x97</status>
-                <midino>0x00</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Master]</group>
-                <key>crossfader</key>
-                <status>0xB6</status>
-                <midino>0x1F</midino>
-                <options>
-                    <fourteen-bit-msb/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel2]</group>
                 <key>cue_default</key>
                 <status>0x91</status>
@@ -447,28 +166,309 @@
                 </options>
             </control>
             <control>
+                <group>[EffectRack1_EffectUnit1_Effect3]</group>
+                <key>enabled</key>
+                <status>0x97</status>
+                <midino>0x06</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
                 <group>[Channel1]</group>
-                <key>cue_default</key>
+                <key>rate</key>
+                <status>0xB0</status>
+                <midino>0x20</midino>
+                <options>
+                    <fourteen-bit-lsb/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>rate</key>
+                <status>0xB1</status>
+                <midino>0x20</midino>
+                <options>
+                    <fourteen-bit-lsb/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>volume</key>
+                <status>0xB0</status>
+                <midino>0x13</midino>
+                <options>
+                    <fourteen-bit-msb/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>volume</key>
+                <status>0xB1</status>
+                <midino>0x13</midino>
+                <options>
+                    <fourteen-bit-msb/>
+                </options>
+            </control>
+            <control>
+                <group>[Master]</group>
+                <key>crossfader</key>
+                <status>0xB6</status>
+                <midino>0x3F</midino>
+                <options>
+                    <fourteen-bit-lsb/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>beatlooproll_0.25_activate</key>
+                <status>0x99</status>
+                <midino>0x00</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>beatlooproll_0.5_activate</key>
+                <status>0x97</status>
+                <midino>0x01</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>parameter3</key>
+                <status>0xB0</status>
+                <midino>0x07</midino>
+                <options>
+                    <fourteen-bit-msb/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>pfl</key>
                 <status>0x90</status>
-                <midino>0x0C</midino>
+                <midino>0x54</midino>
                 <options>
                     <normal/>
                 </options>
             </control>
             <control>
                 <group>[EqualizerRack1_[Channel2]_Effect1]</group>
-                <key>parameter1</key>
+                <key>parameter3</key>
                 <status>0xB1</status>
-                <midino>0x0F</midino>
+                <midino>0x07</midino>
                 <options>
                     <fourteen-bit-msb/>
                 </options>
             </control>
             <control>
-                <group>[EffectRack1_EffectUnit1_Effect3]</group>
+                <group>[Channel2]</group>
+                <key>pfl</key>
+                <status>0x91</status>
+                <midino>0x54</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit2_Effect2]</group>
+                <key>enabled</key>
+                <status>0x99</status>
+                <midino>0x05</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>volume</key>
+                <status>0xB0</status>
+                <midino>0x33</midino>
+                <options>
+                    <fourteen-bit-lsb/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>beatlooproll_2_activate</key>
+                <status>0x99</status>
+                <midino>0x03</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>volume</key>
+                <status>0xB1</status>
+                <midino>0x33</midino>
+                <options>
+                    <fourteen-bit-lsb/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>parameter2</key>
+                <status>0xB0</status>
+                <midino>0x0B</midino>
+                <options>
+                    <fourteen-bit-msb/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>sync_enabled</key>
+                <status>0x90</status>
+                <midino>0x58</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>beatlooproll_0.25_activate</key>
+                <status>0x97</status>
+                <midino>0x00</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
+                <key>parameter2</key>
+                <status>0xB1</status>
+                <midino>0x0B</midino>
+                <options>
+                    <fourteen-bit-msb/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>DDJ200.scratch</key>
+                <description>Channel 1 scratch.</description>
+                <status>0xB0</status>
+                <midino>0x22</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>sync_enabled</key>
+                <status>0x91</status>
+                <midino>0x58</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>DDJ200.scratch</key>
+                <description>Channel 2 scratch.</description>
+                <status>0xB1</status>
+                <midino>0x22</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[QuickEffectRack1_[Channel2]]</group>
+                <key>super1</key>
+                <status>0xB6</status>
+                <midino>0x18</midino>
+                <options>
+                    <fourteen-bit-msb/>
+                </options>
+            </control>
+            <control>
+                <group>[QuickEffectRack1_[Channel1]]</group>
+                <key>super1</key>
+                <status>0xB6</status>
+                <midino>0x17</midino>
+                <options>
+                    <fourteen-bit-msb/>
+                </options>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit2_Effect1]</group>
+                <key>enabled</key>
+                <status>0x99</status>
+                <midino>0x04</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit1_Effect2]</group>
                 <key>enabled</key>
                 <status>0x97</status>
-                <midino>0x06</midino>
+                <midino>0x05</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>parameter3</key>
+                <status>0xB0</status>
+                <midino>0x27</midino>
+                <options>
+                    <fourteen-bit-lsb/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
+                <key>parameter3</key>
+                <status>0xB1</status>
+                <midino>0x27</midino>
+                <options>
+                    <fourteen-bit-lsb/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>beatlooproll_1_activate</key>
+                <status>0x99</status>
+                <midino>0x02</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>beatlooproll_2_activate</key>
+                <status>0x97</status>
+                <midino>0x03</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>parameter2</key>
+                <status>0xB0</status>
+                <midino>0x2B</midino>
+                <options>
+                    <fourteen-bit-lsb/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
+                <key>parameter2</key>
+                <status>0xB1</status>
+                <midino>0x2B</midino>
+                <options>
+                    <fourteen-bit-lsb/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>parameter1</key>
+                <status>0xB0</status>
+                <midino>0x0F</midino>
                 <options>
                     <normal/>
                 </options>
