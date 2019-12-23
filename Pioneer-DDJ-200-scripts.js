@@ -1,7 +1,5 @@
 var DDJ200 = {};
 
-DDJ200.scratching = [];
-
 DDJ200.init = function () {}
 
 DDJ200.shutdown = function () {}
@@ -25,12 +23,10 @@ DDJ200.touch = function (channel, control, value, status, group) {
     if (value == 0) {
         // disable scratch
         engine.scratchDisable(script.deckFromGroup(group));
-        DDJ200.scratching[deckNumber] = false;
     } else {
         // enable scratch
         var alpha = 1.0 / 8;
         var beta = alpha / 32;
         engine.scratchEnable(deckNumber, 128, 33 + 1 / 3, alpha, beta);
-        DDJ200.scratching[deckNumber] = true;
     }
 }
