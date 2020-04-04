@@ -13,7 +13,7 @@
             <control>
                 <group>[Channel2]</group>
                 <key>cue_set</key>
-                <description>MIDI Learned from 8 messages.</description>
+                <description>Deck 2: Set cue point</description>
                 <status>0x91</status>
                 <midino>0x47</midino>
                 <options>
@@ -23,6 +23,7 @@
             <control>
                 <group>[Channel1]</group>
                 <key>pfl</key>
+                <description>Deck 1: Headphone listen (pfl) button</description>
                 <status>0x90</status>
                 <midino>0x54</midino>
                 <options>
@@ -32,6 +33,7 @@
             <control>
                 <group>[Channel2]</group>
                 <key>pfl</key>
+                <description>Deck 2: Headphone listen (pfl) button</description>
                 <status>0x91</status>
                 <midino>0x54</midino>
                 <options>
@@ -41,6 +43,7 @@
             <control>
                 <group>[EqualizerRack1_[Channel1]_Effect1]</group>
                 <key>parameter2</key>
+                <description>Deck 1: Adjust Mid EQ</description>
                 <status>0xB0</status>
                 <midino>0x0B</midino>
                 <options>
@@ -50,6 +53,7 @@
             <control>
                 <group>[EqualizerRack1_[Channel2]_Effect1]</group>
                 <key>parameter2</key>
+                <description>Deck 2: Adjust Mid EQ</description>
                 <status>0xB1</status>
                 <midino>0x0B</midino>
                 <options>
@@ -59,6 +63,7 @@
             <control>
                 <group>[Master]</group>
                 <key>crossfader</key>
+                <description>Master crossfader</description>
                 <status>0xB6</status>
                 <midino>0x3F</midino>
                 <options>
@@ -68,7 +73,7 @@
             <control>
                 <group>[Channel1]</group>
                 <key>bpm_tap</key>
-                <description>MIDI Learned from 24 messages.</description>
+                <description>Deck 1: BPM tap button</description>
                 <status>0x90</status>
                 <midino>0x60</midino>
                 <options>
@@ -78,7 +83,7 @@
             <control>
                 <group>[Channel2]</group>
                 <key>bpm_tap</key>
-                <description>MIDI Learned from 8 messages.</description>
+                <description>Deck 2: BPM tap button</description>
                 <status>0x91</status>
                 <midino>0x60</midino>
                 <options>
@@ -88,6 +93,7 @@
             <control>
                 <group>[EqualizerRack1_[Channel1]_Effect1]</group>
                 <key>parameter3</key>
+                <description>Deck 1: Adjust High EQ</description>
                 <status>0xB0</status>
                 <midino>0x27</midino>
                 <options>
@@ -97,6 +103,7 @@
             <control>
                 <group>[EqualizerRack1_[Channel2]_Effect1]</group>
                 <key>parameter3</key>
+                <description>Deck 2: Adjust High EQ</description>
                 <status>0xB1</status>
                 <midino>0x27</midino>
                 <options>
@@ -106,6 +113,7 @@
             <control>
                 <group>[Channel1]</group>
                 <key>volume</key>
+                <description>Deck 1: Volume Fader</description>
                 <status>0xB0</status>
                 <midino>0x33</midino>
                 <options>
@@ -115,6 +123,7 @@
             <control>
                 <group>[Channel2]</group>
                 <key>volume</key>
+                <description>Deck 2: Volume Fader</description>
                 <status>0xB1</status>
                 <midino>0x33</midino>
                 <options>
@@ -122,8 +131,19 @@
                 </options>
             </control>
             <control>
+                <group>[Channel1]</group>
+                <key>cue_gotoandstop</key>
+                <description>Deck 1: Go to cue point and stop</description>
+                <status>0x90</status>
+                <midino>0x48</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
                 <group>[QuickEffectRack1_[Channel2]]</group>
                 <key>super1</key>
+                <description>Quick Effect: Quick Effect Super Knob (control linked effect parameters)</description>
                 <status>0xB6</status>
                 <midino>0x18</midino>
                 <options>
@@ -131,10 +151,10 @@
                 </options>
             </control>
             <control>
-                <group>[Channel1]</group>
+                <group>[Channel2]</group>
                 <key>cue_gotoandstop</key>
-                <description>MIDI Learned from 2 messages.</description>
-                <status>0x90</status>
+                <description>Deck 2: Go to cue point and stop</description>
+                <status>0x91</status>
                 <midino>0x48</midino>
                 <options>
                     <normal/>
@@ -143,25 +163,17 @@
             <control>
                 <group>[EqualizerRack1_[Channel1]_Effect1]</group>
                 <key>parameter1</key>
+                <description>Deck 1: Adjust Low EQ</description>
                 <status>0xB0</status>
                 <midino>0x0F</midino>
                 <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>cue_gotoandstop</key>
-                <description>MIDI Learned from 4 messages.</description>
-                <status>0x91</status>
-                <midino>0x48</midino>
-                <options>
-                    <normal/>
+                    <fourteen-bit-msb/>
                 </options>
             </control>
             <control>
                 <group>[EqualizerRack1_[Channel2]_Effect1]</group>
                 <key>parameter1</key>
+                <description>Deck 2: Adjust Low EQ</description>
                 <status>0xB1</status>
                 <midino>0x0F</midino>
                 <options>
@@ -171,7 +183,7 @@
             <control>
                 <group>[Channel1]</group>
                 <key>rate</key>
-                <description>MIDI Learned from 306 messages.</description>
+                <description>Deck 1: Playback speed control</description>
                 <status>0xB0</status>
                 <midino>0x00</midino>
                 <options>
@@ -181,7 +193,7 @@
             <control>
                 <group>[Channel2]</group>
                 <key>rate</key>
-                <description>MIDI Learned from 1710 messages.</description>
+                <description>Deck 2: Playback speed control (Vinyl "Pitch" slider)</description>
                 <status>0xB1</status>
                 <midino>0x00</midino>
                 <options>
@@ -191,6 +203,7 @@
             <control>
                 <group>[Channel1]</group>
                 <key>play</key>
+                <description>Deck 1: Play button</description>
                 <status>0x90</status>
                 <midino>0x0B</midino>
                 <options>
@@ -200,6 +213,7 @@
             <control>
                 <group>[Channel2]</group>
                 <key>play</key>
+                <description>Deck 2: Play button</description>
                 <status>0x91</status>
                 <midino>0x0B</midino>
                 <options>
@@ -209,7 +223,7 @@
             <control>
                 <group>[Channel1]</group>
                 <key>cue_default</key>
-                <description>MIDI Learned from 2 messages.</description>
+                <description>Deck 1: Cue button</description>
                 <status>0x90</status>
                 <midino>0x0C</midino>
                 <options>
@@ -219,7 +233,7 @@
             <control>
                 <group>[Channel2]</group>
                 <key>cue_default</key>
-                <description>MIDI Learned from 4 messages.</description>
+                <description>Deck 2:  Cue button</description>
                 <status>0x91</status>
                 <midino>0x0C</midino>
                 <options>
@@ -229,6 +243,7 @@
             <control>
                 <group>[QuickEffectRack1_[Channel1]]</group>
                 <key>super1</key>
+                <description>Quick Effect: Quick Effect Super Knob (control linked effect parameters)</description>
                 <status>0xB6</status>
                 <midino>0x37</midino>
                 <options>
@@ -238,7 +253,7 @@
             <control>
                 <group>[Channel1]</group>
                 <key>hotcue_1_clear</key>
-                <description>MIDI Learned from 2 messages.</description>
+                <description>Deck 1: Clear hotcue 1</description>
                 <status>0x98</status>
                 <midino>0x00</midino>
                 <options>
@@ -248,7 +263,7 @@
             <control>
                 <group>[Channel2]</group>
                 <key>hotcue_1_activate</key>
-                <description>MIDI Learned from 4 messages.</description>
+                <description>Deck 2: Set, preview from of jump to hotcue 1</description>
                 <status>0x99</status>
                 <midino>0x00</midino>
                 <options>
@@ -258,7 +273,7 @@
             <control>
                 <group>[Channel2]</group>
                 <key>hotcue_1_clear</key>
-                <description>MIDI Learned from 20 messages.</description>
+                <description>Deck 2: Clear hotcue 1</description>
                 <status>0x9A</status>
                 <midino>0x00</midino>
                 <options>
@@ -268,7 +283,7 @@
             <control>
                 <group>[Channel1]</group>
                 <key>sync_enabled</key>
-                <description>MIDI Learned from 2 messages.</description>
+                <description>Deck 1: Tap to sync tempo (and phase with quantize enabled), hold to enable permanent sync</description>
                 <status>0x90</status>
                 <midino>0x58</midino>
                 <options>
@@ -278,7 +293,7 @@
             <control>
                 <group>[Channel2]</group>
                 <key>sync_enabled</key>
-                <description>MIDI Learned from 4 messages.</description>
+                <description>Deck 2: Tap to sync tempo (and phase with quantize enabled), hold to enable permanent sync</description>
                 <status>0x91</status>
                 <midino>0x58</midino>
                 <options>
@@ -288,7 +303,7 @@
             <control>
                 <group>[Channel1]</group>
                 <key>hotcue_2_clear</key>
-                <description>MIDI Learned from 8 messages.</description>
+                <description>Deck 1: Clear hotcue 2</description>
                 <status>0x98</status>
                 <midino>0x01</midino>
                 <options>
@@ -298,7 +313,7 @@
             <control>
                 <group>[Channel2]</group>
                 <key>hotcue_2_activate</key>
-                <description>MIDI Learned from 6 messages.</description>
+                <description>Deck 2: Set, preview from of jump to hotcue 2</description>
                 <status>0x99</status>
                 <midino>0x01</midino>
                 <options>
@@ -308,7 +323,7 @@
             <control>
                 <group>[Channel2]</group>
                 <key>hotcue_2_clear</key>
-                <description>MIDI Learned from 22 messages.</description>
+                <description>Deck 2: Clear hotcue 2</description>
                 <status>0x9A</status>
                 <midino>0x01</midino>
                 <options>
@@ -318,6 +333,7 @@
             <control>
                 <group>[Master]</group>
                 <key>crossfader</key>
+                <description>Master crossfader</description>
                 <status>0xB6</status>
                 <midino>0x1F</midino>
                 <options>
@@ -327,7 +343,7 @@
             <control>
                 <group>[Channel1]</group>
                 <key>hotcue_3_clear</key>
-                <description>MIDI Learned from 10 messages.</description>
+                <description>Deck 1: Clear hotcue 3</description>
                 <status>0x98</status>
                 <midino>0x02</midino>
                 <options>
@@ -337,7 +353,7 @@
             <control>
                 <group>[Channel2]</group>
                 <key>hotcue_3_activate</key>
-                <description>MIDI Learned from 8 messages.</description>
+                <description>Deck 2: Set, preview from of jump to hotcue 3</description>
                 <status>0x99</status>
                 <midino>0x02</midino>
                 <options>
@@ -347,7 +363,7 @@
             <control>
                 <group>[Channel2]</group>
                 <key>hotcue_3_clear</key>
-                <description>MIDI Learned from 24 messages.</description>
+                <description>Deck 2: Clear hotcue 3</description>
                 <status>0x9A</status>
                 <midino>0x02</midino>
                 <options>
@@ -357,7 +373,7 @@
             <control>
                 <group>[Channel1]</group>
                 <key>hotcue_1_activate</key>
-                <description>MIDI Learned from 8 messages.</description>
+                <description>Deck 1: Set, preview from or jump to hotcue 1</description>
                 <status>0x97</status>
                 <midino>0x00</midino>
                 <options>
@@ -367,7 +383,7 @@
             <control>
                 <group>[AutoDJ]</group>
                 <key>enabled</key>
-                <description>MIDI Learned from 4 messages.</description>
+                <description>Toggle Auto DJ On/Off</description>
                 <status>0x96</status>
                 <midino>0x59</midino>
                 <options>
@@ -377,6 +393,7 @@
             <control>
                 <group>[EqualizerRack1_[Channel1]_Effect1]</group>
                 <key>parameter2</key>
+                <description>Deck 1: Adjust Mid EQ</description>
                 <status>0xB0</status>
                 <midino>0x2B</midino>
                 <options>
@@ -386,6 +403,7 @@
             <control>
                 <group>[EqualizerRack1_[Channel2]_Effect1]</group>
                 <key>parameter2</key>
+                <description>Deck 2: Adjust Mid EQ</description>
                 <status>0xB1</status>
                 <midino>0x2B</midino>
                 <options>
@@ -395,7 +413,7 @@
             <control>
                 <group>[Channel1]</group>
                 <key>hotcue_4_clear</key>
-                <description>MIDI Learned from 12 messages.</description>
+                <description>Deck 1: Clear hotcue 4</description>
                 <status>0x98</status>
                 <midino>0x03</midino>
                 <options>
@@ -405,7 +423,7 @@
             <control>
                 <group>[Channel1]</group>
                 <key>DDJ200.touch</key>
-                <description>Channel 1 touch.</description>
+                <description>Deck 1: Touch</description>
                 <status>0x90</status>
                 <midino>0x36</midino>
                 <options>
@@ -415,6 +433,7 @@
             <control>
                 <group>[EqualizerRack1_[Channel1]_Effect1]</group>
                 <key>parameter3</key>
+                <description>Deck 1: Adjust High EQ</description>
                 <status>0xB0</status>
                 <midino>0x07</midino>
                 <options>
@@ -424,7 +443,7 @@
             <control>
                 <group>[Channel2]</group>
                 <key>hotcue_4_activate</key>
-                <description>MIDI Learned from 10 messages.</description>
+                <description>Deck 2: Set, preview from of jump to hotcue 4</description>
                 <status>0x99</status>
                 <midino>0x03</midino>
                 <options>
@@ -434,7 +453,7 @@
             <control>
                 <group>[Channel2]</group>
                 <key>DDJ200.touch</key>
-                <description>Channel 2 touch.</description>
+                <description>Deck 2: Touch</description>
                 <status>0x91</status>
                 <midino>0x36</midino>
                 <options>
@@ -444,6 +463,7 @@
             <control>
                 <group>[EqualizerRack1_[Channel2]_Effect1]</group>
                 <key>parameter3</key>
+                <description>Deck 2: Adjust High EQ</description>
                 <status>0xB1</status>
                 <midino>0x07</midino>
                 <options>
@@ -453,7 +473,7 @@
             <control>
                 <group>[Channel2]</group>
                 <key>hotcue_4_clear</key>
-                <description>MIDI Learned from 26 messages.</description>
+                <description>Deck 2: Clear hotcue 4</description>
                 <status>0x9A</status>
                 <midino>0x03</midino>
                 <options>
@@ -463,7 +483,7 @@
             <control>
                 <group>[Channel1]</group>
                 <key>hotcue_2_activate</key>
-                <description>MIDI Learned from 10 messages.</description>
+                <description>Deck 1: Set, preview from or jump to hotcue 2</description>
                 <status>0x97</status>
                 <midino>0x01</midino>
                 <options>
@@ -473,7 +493,7 @@
             <control>
                 <group>[AutoDJ]</group>
                 <key>fade_now</key>
-                <description>MIDI Learned from 6 messages.</description>
+                <description>Trigger the transition to the next track</description>
                 <status>0x96</status>
                 <midino>0x5A</midino>
                 <options>
@@ -483,7 +503,7 @@
             <control>
                 <group>[Channel1]</group>
                 <key>hotcue_5_clear</key>
-                <description>MIDI Learned from 14 messages.</description>
+                <description>Deck 1: Clear hotcue 5</description>
                 <status>0x98</status>
                 <midino>0x04</midino>
                 <options>
@@ -493,7 +513,7 @@
             <control>
                 <group>[Channel2]</group>
                 <key>hotcue_5_activate</key>
-                <description>MIDI Learned from 12 messages.</description>
+                <description>Deck 2: Set, preview from of jump to hotcue 5</description>
                 <status>0x99</status>
                 <midino>0x04</midino>
                 <options>
@@ -503,7 +523,7 @@
             <control>
                 <group>[Channel2]</group>
                 <key>hotcue_5_clear</key>
-                <description>MIDI Learned from 28 messages.</description>
+                <description>Deck 2: Clear hotcue 5</description>
                 <status>0x9A</status>
                 <midino>0x04</midino>
                 <options>
@@ -513,7 +533,7 @@
             <control>
                 <group>[Channel1]</group>
                 <key>hotcue_3_activate</key>
-                <description>MIDI Learned from 12 messages.</description>
+                <description>Deck 1: Set, preview from or jump to hotcue 3</description>
                 <status>0x97</status>
                 <midino>0x02</midino>
                 <options>
@@ -523,6 +543,7 @@
             <control>
                 <group>[Channel1]</group>
                 <key>volume</key>
+                <description>Deck 1: Volume Fader</description>
                 <status>0xB0</status>
                 <midino>0x13</midino>
                 <options>
@@ -532,7 +553,7 @@
             <control>
                 <group>[Channel1]</group>
                 <key>hotcue_6_clear</key>
-                <description>MIDI Learned from 16 messages.</description>
+                <description>Deck 1: Clear hotcue 6</description>
                 <status>0x98</status>
                 <midino>0x05</midino>
                 <options>
@@ -542,6 +563,7 @@
             <control>
                 <group>[Channel2]</group>
                 <key>volume</key>
+                <description>Deck 2: Volume Fader</description>
                 <status>0xB1</status>
                 <midino>0x13</midino>
                 <options>
@@ -551,7 +573,7 @@
             <control>
                 <group>[Channel2]</group>
                 <key>hotcue_6_activate</key>
-                <description>MIDI Learned from 14 messages.</description>
+                <description>Deck 2: Set, preview from of jump to hotcue 6</description>
                 <status>0x99</status>
                 <midino>0x05</midino>
                 <options>
@@ -561,7 +583,7 @@
             <control>
                 <group>[Channel2]</group>
                 <key>hotcue_6_clear</key>
-                <description>MIDI Learned from 30 messages.</description>
+                <description>Deck 2: Clear hotcue 6</description>
                 <status>0x9A</status>
                 <midino>0x05</midino>
                 <options>
@@ -571,7 +593,7 @@
             <control>
                 <group>[Channel1]</group>
                 <key>hotcue_4_activate</key>
-                <description>MIDI Learned from 14 messages.</description>
+                <description>Deck 1: Set, preview from or jump to hotcue 4</description>
                 <status>0x97</status>
                 <midino>0x03</midino>
                 <options>
@@ -581,7 +603,7 @@
             <control>
                 <group>[Channel1]</group>
                 <key>hotcue_7_clear</key>
-                <description>MIDI Learned from 18 messages.</description>
+                <description>Deck 1: Clear hotcue 7</description>
                 <status>0x98</status>
                 <midino>0x06</midino>
                 <options>
@@ -591,7 +613,7 @@
             <control>
                 <group>[Channel2]</group>
                 <key>hotcue_7_activate</key>
-                <description>MIDI Learned from 16 messages.</description>
+                <description>Deck 2: Set, preview from of jump to hotcue 7</description>
                 <status>0x99</status>
                 <midino>0x06</midino>
                 <options>
@@ -601,7 +623,7 @@
             <control>
                 <group>[Channel2]</group>
                 <key>hotcue_7_clear</key>
-                <description>MIDI Learned from 32 messages.</description>
+                <description>Deck 2: Clear hotcue 7</description>
                 <status>0x9A</status>
                 <midino>0x06</midino>
                 <options>
@@ -611,6 +633,7 @@
             <control>
                 <group>[QuickEffectRack1_[Channel2]]</group>
                 <key>super1</key>
+                <description>Quick Effect: Quick Effect Super Knob (control linked effect parameters)</description>
                 <status>0xB6</status>
                 <midino>0x38</midino>
                 <options>
@@ -620,7 +643,7 @@
             <control>
                 <group>[Channel1]</group>
                 <key>hotcue_5_activate</key>
-                <description>MIDI Learned from 16 messages.</description>
+                <description>Deck 1: Set, preview from or jump to hotcue 5</description>
                 <status>0x97</status>
                 <midino>0x04</midino>
                 <options>
@@ -628,8 +651,19 @@
                 </options>
             </control>
             <control>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>parameter1</key>
+                <description>Deck 1: Adjust Low EQ</description>
+                <status>0xB0</status>
+                <midino>0x2F</midino>
+                <options>
+                    <fourteen-bit-lsb/>
+                </options>
+            </control>
+            <control>
                 <group>[EqualizerRack1_[Channel2]_Effect1]</group>
                 <key>parameter1</key>
+                <description>Deck 2: Adjust Low EQ</description>
                 <status>0xB1</status>
                 <midino>0x2F</midino>
                 <options>
@@ -639,7 +673,7 @@
             <control>
                 <group>[Channel1]</group>
                 <key>hotcue_8_clear</key>
-                <description>MIDI Learned from 20 messages.</description>
+                <description>Deck 1: Clear hotcue 8</description>
                 <status>0x98</status>
                 <midino>0x07</midino>
                 <options>
@@ -649,7 +683,7 @@
             <control>
                 <group>[Channel2]</group>
                 <key>hotcue_8_activate</key>
-                <description>MIDI Learned from 18 messages.</description>
+                <description>Deck 2: Set, preview from of jump to hotcue 8</description>
                 <status>0x99</status>
                 <midino>0x07</midino>
                 <options>
@@ -659,7 +693,7 @@
             <control>
                 <group>[Channel2]</group>
                 <key>hotcue_8_clear</key>
-                <description>MIDI Learned from 34 messages.</description>
+                <description>Deck 2: Clear hotcue 8</description>
                 <status>0x9A</status>
                 <midino>0x07</midino>
                 <options>
@@ -669,7 +703,7 @@
             <control>
                 <group>[Channel1]</group>
                 <key>hotcue_6_activate</key>
-                <description>MIDI Learned from 18 messages.</description>
+                <description>Deck 1: Set, preview from or jump to hotcue 6</description>
                 <status>0x97</status>
                 <midino>0x05</midino>
                 <options>
@@ -679,7 +713,7 @@
             <control>
                 <group>[Channel1]</group>
                 <key>rate</key>
-                <description>MIDI Learned from 306 messages.</description>
+                <description>Deck 1: Playback speed control</description>
                 <status>0xB0</status>
                 <midino>0x20</midino>
                 <options>
@@ -689,7 +723,7 @@
             <control>
                 <group>[Channel2]</group>
                 <key>rate</key>
-                <description>MIDI Learned from 1710 messages.</description>
+                <description>Deck 2: Playback speed control (Vinyl "Pitch" slider)</description>
                 <status>0xB1</status>
                 <midino>0x20</midino>
                 <options>
@@ -699,7 +733,7 @@
             <control>
                 <group>[Channel1]</group>
                 <key>hotcue_7_activate</key>
-                <description>MIDI Learned from 20 messages.</description>
+                <description>Deck 1: Set, preview from or jump to hotcue 7</description>
                 <status>0x97</status>
                 <midino>0x06</midino>
                 <options>
@@ -709,7 +743,7 @@
             <control>
                 <group>[Channel1]</group>
                 <key>DDJ200.jog</key>
-                <description>Channel 1 jog.</description>
+                <description>Deck 1: Jog</description>
                 <status>0xB0</status>
                 <midino>0x21</midino>
                 <options>
@@ -719,7 +753,7 @@
             <control>
                 <group>[Channel2]</group>
                 <key>DDJ200.jog</key>
-                <description>Channel 2 jog.</description>
+                <description>Deck 2: Jog</description>
                 <status>0xB1</status>
                 <midino>0x21</midino>
                 <options>
@@ -729,7 +763,7 @@
             <control>
                 <group>[Channel1]</group>
                 <key>hotcue_8_activate</key>
-                <description>MIDI Learned from 26 messages.</description>
+                <description>Deck 1: Set, preview from or jump to hotcue 8</description>
                 <status>0x97</status>
                 <midino>0x07</midino>
                 <options>
@@ -739,7 +773,7 @@
             <control>
                 <group>[Channel1]</group>
                 <key>DDJ200.scratch</key>
-                <description>Channel 1 scratch.</description>
+                <description>Deck 1: Scratch</description>
                 <status>0xB0</status>
                 <midino>0x22</midino>
                 <options>
@@ -749,6 +783,7 @@
             <control>
                 <group>[QuickEffectRack1_[Channel1]]</group>
                 <key>super1</key>
+                <description>Quick Effect: Quick Effect Super Knob (control linked effect parameters)</description>
                 <status>0xB6</status>
                 <midino>0x17</midino>
                 <options>
@@ -758,7 +793,7 @@
             <control>
                 <group>[Channel2]</group>
                 <key>DDJ200.scratch</key>
-                <description>Channel 2 scratch.</description>
+                <description>Deck 2: Scratch</description>
                 <status>0xB1</status>
                 <midino>0x22</midino>
                 <options>
@@ -768,7 +803,7 @@
             <control>
                 <group>[Channel1]</group>
                 <key>cue_set</key>
-                <description>MIDI Learned from 6 messages.</description>
+                <description>Deck 1: Set cue point</description>
                 <status>0x90</status>
                 <midino>0x47</midino>
                 <options>
