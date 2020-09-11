@@ -7,38 +7,17 @@
     </info>
     <controller id="DDJ-200">
         <scriptfiles>
-            <file functionprefix="DDJ200" filename="Pioneer-DDJ-200-scripts.js"/>
+            <file filename="Pioneer-DDJ-200-scripts.js" functionprefix=""/>
         </scriptfiles>
         <controls>
             <control>
                 <group>[Channel2]</group>
-                <key>sync_enabled</key>
-                <description>Deck 2: Tap to sync tempo (and phase with quantize enabled), hold to enable permanent sync</description>
-                <status>0x91</status>
-                <midino>0x58</midino>
+                <key>hotcue_8_activate</key>
+                <description>Deck 2: Set, preview from of jump to hotcue 8</description>
+                <status>0x99</status>
+                <midino>0x07</midino>
                 <options>
                     <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>sync_enabled</key>
-                <description>Deck 1: Tap to sync tempo (and phase with quantize enabled), hold to enable permanent sync</description>
-                <status>0x90</status>
-                <midino>0x58</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Master]</group>
-                <key>crossfader</key>
-                <description>Master crossfader</description>
-                <status>0xB6</status>
-                <midino>0x3F</midino>
-                <options>
-                    <soft-takeover/>
-                    <fourteen-bit-lsb/>
                 </options>
             </control>
             <control>
@@ -52,6 +31,26 @@
                 </options>
             </control>
             <control>
+                <group>[Channel2]</group>
+                <key>sync_enabled</key>
+                <description>Deck 2: Tap to sync tempo (and phase with quantize enabled), hold to enable permanent sync</description>
+                <status>0x91</status>
+                <midino>0x58</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>hotcue_8_clear</key>
+                <description>Deck 1: Clear hotcue 8</description>
+                <status>0x98</status>
+                <midino>0x07</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
                 <group>[Channel1]</group>
                 <key>DDJ200.seek</key>
                 <description>Deck 1: Seek</description>
@@ -62,11 +61,41 @@
                 </options>
             </control>
             <control>
-                <group>[AutoDJ]</group>
-                <key>enabled</key>
-                <description>Toggle Auto DJ On/Off</description>
-                <status>0x96</status>
-                <midino>0x59</midino>
+                <group>[Channel1]</group>
+                <key>sync_enabled</key>
+                <description>Deck 1: Tap to sync tempo (and phase with quantize enabled), hold to enable permanent sync</description>
+                <status>0x90</status>
+                <midino>0x58</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>hotcue_7_clear</key>
+                <description>Deck 2: Clear hotcue 7</description>
+                <status>0x9A</status>
+                <midino>0x06</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>hotcue_7_activate</key>
+                <description>Deck 2: Set, preview from of jump to hotcue 7</description>
+                <status>0x99</status>
+                <midino>0x06</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>hotcue_7_clear</key>
+                <description>Deck 1: Clear hotcue 7</description>
+                <status>0x98</status>
+                <midino>0x06</midino>
                 <options>
                     <normal/>
                 </options>
@@ -82,26 +111,6 @@
                 </options>
             </control>
             <control>
-                <group>[Channel2]</group>
-                <key>DDJ200.touch</key>
-                <description>Deck 2: Touch</description>
-                <status>0x91</status>
-                <midino>0x36</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>DDJ200.touch</key>
-                <description>Deck 1: Touch</description>
-                <status>0x90</status>
-                <midino>0x36</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
                 <group>[EqualizerRack1_[Channel2]_Effect1]</group>
                 <key>parameter2</key>
                 <description>Deck 2: Adjust Mid EQ</description>
@@ -109,36 +118,6 @@
                 <midino>0x2B</midino>
                 <options>
                     <fourteen-bit-lsb/>
-                </options>
-            </control>
-            <control>
-                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
-                <key>parameter2</key>
-                <description>Deck 1: Adjust Mid EQ</description>
-                <status>0xB0</status>
-                <midino>0x2B</midino>
-                <options>
-                    <fourteen-bit-lsb/>
-                </options>
-            </control>
-            <control>
-                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
-                <key>parameter3</key>
-                <description>Deck 2: Adjust High EQ</description>
-                <status>0xB1</status>
-                <midino>0x07</midino>
-                <options>
-                    <fourteen-bit-msb/>
-                </options>
-            </control>
-            <control>
-                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
-                <key>parameter3</key>
-                <description>Deck 1: Adjust High EQ</description>
-                <status>0xB0</status>
-                <midino>0x07</midino>
-                <options>
-                    <fourteen-bit-msb/>
                 </options>
             </control>
             <control>
@@ -152,13 +131,13 @@
                 </options>
             </control>
             <control>
-                <group>[QuickEffectRack1_[Channel2]]</group>
-                <key>super1</key>
-                <description>Quick Effect: Quick Effect Super Knob (control linked effect parameters)</description>
-                <status>0xB6</status>
-                <midino>0x18</midino>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>parameter2</key>
+                <description>Deck 1: Adjust Mid EQ</description>
+                <status>0xB0</status>
+                <midino>0x2B</midino>
                 <options>
-                    <fourteen-bit-msb/>
+                    <fourteen-bit-lsb/>
                 </options>
             </control>
             <control>
@@ -169,6 +148,46 @@
                 <midino>0x60</midino>
                 <options>
                     <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
+                <key>parameter3</key>
+                <description>Deck 2: Adjust High EQ</description>
+                <status>0xB1</status>
+                <midino>0x07</midino>
+                <options>
+                    <fourteen-bit-msb/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>DDJ200.touch</key>
+                <description>Deck 2: Touch</description>
+                <status>0x91</status>
+                <midino>0x36</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>parameter3</key>
+                <description>Deck 1: Adjust High EQ</description>
+                <status>0xB0</status>
+                <midino>0x07</midino>
+                <options>
+                    <fourteen-bit-msb/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>DDJ200.touch</key>
+                <description>Deck 1: Touch</description>
+                <status>0x90</status>
+                <midino>0x36</midino>
+                <options>
+                    <script-binding/>
                 </options>
             </control>
             <control>
@@ -202,16 +221,6 @@
                 </options>
             </control>
             <control>
-                <group>[Channel1]</group>
-                <key>cue_gotoandstop</key>
-                <description>Deck 1: Go to cue point and stop</description>
-                <status>0x90</status>
-                <midino>0x48</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
                 <group>[EqualizerRack1_[Channel2]_Effect1]</group>
                 <key>parameter1</key>
                 <description>Deck 2: Adjust Low EQ</description>
@@ -222,6 +231,26 @@
                 </options>
             </control>
             <control>
+                <group>[QuickEffectRack1_[Channel2]]</group>
+                <key>super1</key>
+                <description>Quick Effect: Quick Effect Super Knob (control linked effect parameters)</description>
+                <status>0xB6</status>
+                <midino>0x18</midino>
+                <options>
+                    <fourteen-bit-msb/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>cue_gotoandstop</key>
+                <description>Deck 1: Go to cue point and stop</description>
+                <status>0x90</status>
+                <midino>0x48</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
                 <group>[EqualizerRack1_[Channel1]_Effect1]</group>
                 <key>parameter1</key>
                 <description>Deck 1: Adjust Low EQ</description>
@@ -229,68 +258,6 @@
                 <midino>0x2F</midino>
                 <options>
                     <fourteen-bit-lsb/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>play</key>
-                <description>Deck 2: Play button</description>
-                <status>0x91</status>
-                <midino>0x0B</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>rate</key>
-                <description>Deck 2: Playback speed control</description>
-                <status>0xB1</status>
-                <midino>0x20</midino>
-                <options>
-                    <soft-takeover/>
-                    <fourteen-bit-lsb/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>play</key>
-                <description>Deck 1: Play button</description>
-                <status>0x90</status>
-                <midino>0x0B</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>rate</key>
-                <description>Deck 1: Playback speed control</description>
-                <status>0xB0</status>
-                <midino>0x20</midino>
-                <options>
-                    <soft-takeover/>
-                    <fourteen-bit-lsb/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>cue_default</key>
-                <description>Deck 2:  Cue button</description>
-                <status>0x91</status>
-                <midino>0x0C</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>cue_default</key>
-                <description>Deck 1: Cue button</description>
-                <status>0x90</status>
-                <midino>0x0C</midino>
-                <options>
-                    <normal/>
                 </options>
             </control>
             <control>
@@ -325,19 +292,51 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>DDJ200.scratch</key>
-                <description>Deck 2: Scratch</description>
-                <status>0xB1</status>
-                <midino>0x22</midino>
+                <key>play</key>
+                <description>Deck 2: Play button</description>
+                <status>0x91</status>
+                <midino>0x0B</midino>
                 <options>
-                    <script-binding/>
+                    <normal/>
                 </options>
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>DDJ200.scratch</key>
-                <description>Deck 1: Scratch</description>
+				<key>play</key>
+                <description>Deck 1: Play button</description>
+                <status>0x90</status>
+                <midino>0x0B</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>rate</key>
+                <description>Deck 2: Playback speed control</description>
+                <status>0xB1</status>
+                <midino>0x20</midino>
+                <options>
+                    <soft-takeover/>
+                    <fourteen-bit-lsb/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>rate</key>
+                <description>Deck 1: Playback speed control</description>
                 <status>0xB0</status>
+                <midino>0x20</midino>
+                <options>
+                    <soft-takeover/>
+                    <fourteen-bit-lsb/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>DDJ200.scratch</key>
+                <description>Deck 2: Scratch</description>
+                <status>0xB1</status>
                 <midino>0x22</midino>
                 <options>
                     <script-binding/>
@@ -356,10 +355,30 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>hotcue_1_activate</key>
-                <description>Deck 1: Set, preview from or jump to hotcue 1</description>
-                <status>0x97</status>
-                <midino>0x00</midino>
+                <key>DDJ200.scratch</key>
+                <description>Deck 1: Scratch</description>
+                <status>0xB0</status>
+                <midino>0x22</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>cue_default</key>
+                <description>Deck 2:  Cue button</description>
+                <status>0x91</status>
+                <midino>0x0C</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>cue_default</key>
+                <description>Deck 1: Cue button</description>
+                <status>0x90</status>
+                <midino>0x0C</midino>
                 <options>
                     <normal/>
                 </options>
@@ -385,6 +404,16 @@
                 </options>
             </control>
             <control>
+                <group>[Channel1]</group>
+                <key>hotcue_2_activate</key>
+                <description>Deck 1: Set, preview from or jump to hotcue 2</description>
+                <status>0x97</status>
+                <midino>0x01</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
                 <group>[EqualizerRack1_[Channel2]_Effect1]</group>
                 <key>parameter2</key>
                 <description>Deck 2: Adjust Mid EQ</description>
@@ -405,11 +434,121 @@
                 </options>
             </control>
             <control>
+                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
+                <key>parameter3</key>
+                <description>Deck 2: Adjust High EQ</description>
+                <status>0xB1</status>
+                <midino>0x27</midino>
+                <options>
+                    <fourteen-bit-lsb/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>parameter3</key>
+                <description>Deck 1: Adjust High EQ</description>
+                <status>0xB0</status>
+                <midino>0x27</midino>
+                <options>
+                    <fourteen-bit-lsb/>
+                </options>
+            </control>
+            <control>
                 <group>[Channel1]</group>
-                <key>hotcue_2_activate</key>
-                <description>Deck 1: Set, preview from or jump to hotcue 2</description>
+                <key>hotcue_1_activate</key>
+                <description>Deck 1: Set, preview from or jump to hotcue 1</description>
                 <status>0x97</status>
+                <midino>0x00</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>hotcue_4_activate</key>
+                <description>Deck 1: Set, preview from or jump to hotcue 4</description>
+                <status>0x97</status>
+                <midino>0x03</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>hotcue_2_clear</key>
+                <description>Deck 2: Clear hotcue 2</description>
+                <status>0x9A</status>
                 <midino>0x01</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>hotcue_2_activate</key>
+                <description>Deck 2: Set, preview from of jump to hotcue 2</description>
+                <status>0x99</status>
+                <midino>0x01</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>volume</key>
+                <description>Deck 2: Volume Fader</description>
+                <status>0xB1</status>
+                <midino>0x13</midino>
+                <options>
+                    <fourteen-bit-msb/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>hotcue_2_clear</key>
+                <description>Deck 1: Clear hotcue 2</description>
+                <status>0x98</status>
+                <midino>0x01</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>volume</key>
+                <description>Deck 1: Volume Fader</description>
+                <status>0xB0</status>
+                <midino>0x13</midino>
+                <options>
+                    <fourteen-bit-msb/>
+                </options>
+            </control>
+            <control>
+                <group>[QuickEffectRack1_[Channel2]]</group>
+                <key>super1</key>
+                <description>Quick Effect: Quick Effect Super Knob (control linked effect parameters)</description>
+                <status>0xB6</status>
+                <midino>0x38</midino>
+                <options>
+                    <fourteen-bit-lsb/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>hotcue_3_activate</key>
+                <description>Deck 1: Set, preview from or jump to hotcue 3</description>
+                <status>0x97</status>
+                <midino>0x02</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>hotcue_1_clear</key>
+                <description>Deck 2: Clear hotcue 1</description>
+                <status>0x9A</status>
+                <midino>0x00</midino>
                 <options>
                     <normal/>
                 </options>
@@ -436,132 +575,62 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>hotcue_3_activate</key>
-                <description>Deck 1: Set, preview from or jump to hotcue 3</description>
+                <key>hotcue_6_activate</key>
+                <description>Deck 1: Set, preview from or jump to hotcue 6</description>
                 <status>0x97</status>
-                <midino>0x02</midino>
+                <midino>0x05</midino>
                 <options>
                     <normal/>
                 </options>
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>hotcue_1_clear</key>
-                <description>Deck 2: Clear hotcue 1</description>
+                <key>hotcue_4_clear</key>
+                <description>Deck 2: Clear hotcue 4</description>
                 <status>0x9A</status>
-                <midino>0x00</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
-                <key>parameter3</key>
-                <description>Deck 2: Adjust High EQ</description>
-                <status>0xB1</status>
-                <midino>0x27</midino>
-                <options>
-                    <fourteen-bit-lsb/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>hotcue_2_activate</key>
-                <description>Deck 2: Set, preview from of jump to hotcue 2</description>
-                <status>0x99</status>
-                <midino>0x01</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
-                <key>parameter3</key>
-                <description>Deck 1: Adjust High EQ</description>
-                <status>0xB0</status>
-                <midino>0x27</midino>
-                <options>
-                    <fourteen-bit-lsb/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>hotcue_2_clear</key>
-                <description>Deck 1: Clear hotcue 2</description>
-                <status>0x98</status>
-                <midino>0x01</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>volume</key>
-                <description>Deck 2: Volume Fader</description>
-                <status>0xB1</status>
-                <midino>0x13</midino>
-                <options>
-                    <fourteen-bit-msb/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>hotcue_4_activate</key>
-                <description>Deck 1: Set, preview from or jump to hotcue 4</description>
-                <status>0x97</status>
                 <midino>0x03</midino>
                 <options>
                     <normal/>
                 </options>
             </control>
             <control>
-                <group>[Channel1]</group>
-                <key>volume</key>
-                <description>Deck 1: Volume Fader</description>
-                <status>0xB0</status>
-                <midino>0x13</midino>
+                <group>[Channel2]</group>
+                <key>hotcue_4_activate</key>
+                <description>Deck 2: Set, preview from of jump to hotcue 4</description>
+                <status>0x99</status>
+                <midino>0x03</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
+                <key>parameter1</key>
+                <description>Deck 2: Adjust Low EQ</description>
+                <status>0xB1</status>
+                <midino>0x0F</midino>
                 <options>
                     <fourteen-bit-msb/>
                 </options>
             </control>
             <control>
-                <group>[Channel2]</group>
-                <key>hotcue_2_clear</key>
-                <description>Deck 2: Clear hotcue 2</description>
-                <status>0x9A</status>
-                <midino>0x01</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[QuickEffectRack1_[Channel2]]</group>
-                <key>super1</key>
-                <description>Quick Effect: Quick Effect Super Knob (control linked effect parameters)</description>
-                <status>0xB6</status>
-                <midino>0x38</midino>
-                <options>
-                    <fourteen-bit-lsb/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>hotcue_3_activate</key>
-                <description>Deck 2: Set, preview from of jump to hotcue 3</description>
-                <status>0x99</status>
-                <midino>0x02</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel1]</group>
-                <key>hotcue_3_clear</key>
-                <description>Deck 1: Clear hotcue 3</description>
+                <key>hotcue_4_clear</key>
+                <description>Deck 1: Clear hotcue 4</description>
                 <status>0x98</status>
-                <midino>0x02</midino>
+                <midino>0x03</midino>
                 <options>
                     <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>parameter1</key>
+                <description>Deck 1: Adjust Low EQ</description>
+                <status>0xB0</status>
+                <midino>0x0F</midino>
+                <options>
+                    <fourteen-bit-msb/>
                 </options>
             </control>
             <control>
@@ -585,50 +654,70 @@
                 </options>
             </control>
             <control>
-                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
-                <key>parameter1</key>
-                <description>Deck 2: Adjust Low EQ</description>
-                <status>0xB1</status>
-                <midino>0x0F</midino>
+                <group>[Channel2]</group>
+                <key>hotcue_3_activate</key>
+                <description>Deck 2: Set, preview from of jump to hotcue 3</description>
+                <status>0x99</status>
+                <midino>0x02</midino>
                 <options>
-                    <fourteen-bit-msb/>
+                    <normal/>
                 </options>
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>hotcue_4_activate</key>
-                <description>Deck 2: Set, preview from of jump to hotcue 4</description>
-                <status>0x99</status>
-                <midino>0x03</midino>
+                <key>cue_set</key>
+                <description>Deck 2: Set cue point</description>
+                <status>0x91</status>
+                <midino>0x47</midino>
                 <options>
                     <normal/>
                 </options>
             </control>
             <control>
-                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
-                <key>parameter1</key>
-                <description>Deck 1: Adjust Low EQ</description>
-                <status>0xB0</status>
-                <midino>0x0F</midino>
+                <group>[Channel1]</group>
+                <key>hotcue_3_clear</key>
+                <description>Deck 1: Clear hotcue 3</description>
+                <status>0x98</status>
+                <midino>0x02</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>cue_set</key>
+                <description>Deck 1: Set cue point</description>
+                <status>0x90</status>
+                <midino>0x47</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[QuickEffectRack1_[Channel1]]</group>
+                <key>super1</key>
+                <description>Quick Effect: Quick Effect Super Knob (control linked effect parameters)</description>
+                <status>0xB6</status>
+                <midino>0x17</midino>
                 <options>
                     <fourteen-bit-msb/>
                 </options>
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>hotcue_4_clear</key>
-                <description>Deck 1: Clear hotcue 4</description>
-                <status>0x98</status>
-                <midino>0x03</midino>
+                <key>hotcue_8_activate</key>
+                <description>Deck 1: Set, preview from or jump to hotcue 8</description>
+                <status>0x97</status>
+                <midino>0x07</midino>
                 <options>
                     <normal/>
                 </options>
             </control>
             <control>
-                <group>[Channel1]</group>
-                <key>hotcue_6_activate</key>
-                <description>Deck 1: Set, preview from or jump to hotcue 6</description>
-                <status>0x97</status>
+                <group>[Channel2]</group>
+                <key>hotcue_6_clear</key>
+                <description>Deck 2: Clear hotcue 6</description>
+                <status>0x9A</status>
                 <midino>0x05</midino>
                 <options>
                     <normal/>
@@ -636,10 +725,50 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>hotcue_4_clear</key>
-                <description>Deck 2: Clear hotcue 4</description>
+                <key>hotcue_6_activate</key>
+                <description>Deck 2: Set, preview from of jump to hotcue 6</description>
+                <status>0x99</status>
+                <midino>0x05</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>hotcue_6_clear</key>
+                <description>Deck 1: Clear hotcue 6</description>
+                <status>0x98</status>
+                <midino>0x05</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[AutoDJ]</group>
+                <key>enabled</key>
+                <description>Toggle Auto DJ On/Off</description>
+                <status>0x96</status>
+                <midino>0x59</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>hotcue_7_activate</key>
+                <description>Deck 1: Set, preview from or jump to hotcue 7</description>
+                <status>0x97</status>
+                <midino>0x06</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>hotcue_5_clear</key>
+                <description>Deck 2: Clear hotcue 5</description>
                 <status>0x9A</status>
-                <midino>0x03</midino>
+                <midino>0x04</midino>
                 <options>
                     <normal/>
                 </options>
@@ -687,143 +816,14 @@
                 </options>
             </control>
             <control>
-                <group>[Channel1]</group>
-                <key>hotcue_7_activate</key>
-                <description>Deck 1: Set, preview from or jump to hotcue 7</description>
-                <status>0x97</status>
-                <midino>0x06</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>hotcue_5_clear</key>
-                <description>Deck 2: Clear hotcue 5</description>
-                <status>0x9A</status>
-                <midino>0x04</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[QuickEffectRack1_[Channel1]]</group>
-                <key>super1</key>
-                <description>Quick Effect: Quick Effect Super Knob (control linked effect parameters)</description>
+                <group>[Master]</group>
+                <key>crossfader</key>
+                <description>Master crossfader</description>
                 <status>0xB6</status>
-                <midino>0x17</midino>
+                <midino>0x3F</midino>
                 <options>
-                    <fourteen-bit-msb/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>hotcue_6_activate</key>
-                <description>Deck 2: Set, preview from of jump to hotcue 6</description>
-                <status>0x99</status>
-                <midino>0x05</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>hotcue_6_clear</key>
-                <description>Deck 1: Clear hotcue 6</description>
-                <status>0x98</status>
-                <midino>0x05</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>hotcue_8_activate</key>
-                <description>Deck 1: Set, preview from or jump to hotcue 8</description>
-                <status>0x97</status>
-                <midino>0x07</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>hotcue_6_clear</key>
-                <description>Deck 2: Clear hotcue 6</description>
-                <status>0x9A</status>
-                <midino>0x05</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>hotcue_7_activate</key>
-                <description>Deck 2: Set, preview from of jump to hotcue 7</description>
-                <status>0x99</status>
-                <midino>0x06</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>hotcue_7_clear</key>
-                <description>Deck 1: Clear hotcue 7</description>
-                <status>0x98</status>
-                <midino>0x06</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>hotcue_7_clear</key>
-                <description>Deck 2: Clear hotcue 7</description>
-                <status>0x9A</status>
-                <midino>0x06</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>hotcue_8_activate</key>
-                <description>Deck 2: Set, preview from of jump to hotcue 8</description>
-                <status>0x99</status>
-                <midino>0x07</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>hotcue_8_clear</key>
-                <description>Deck 1: Clear hotcue 8</description>
-                <status>0x98</status>
-                <midino>0x07</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>cue_set</key>
-                <description>Deck 2: Set cue point</description>
-                <status>0x91</status>
-                <midino>0x47</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>cue_set</key>
-                <description>Deck 1: Set cue point</description>
-                <status>0x90</status>
-                <midino>0x47</midino>
-                <options>
-                    <normal/>
+                    <soft-takeover/>
+                    <fourteen-bit-lsb/>
                 </options>
             </control>
             <control>
@@ -837,6 +837,49 @@
                 </options>
             </control>
         </controls>
-        <outputs/>
+
+        <outputs>
+            <output>
+                <group>[Channel1]</group>
+				<key>play</key>
+                <description>Deck 1: Play button</description>
+                <status>0x90</status>
+                <midino>0x0B</midino>
+                <on>0x7F</on>
+                <off>0x00</off>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel2]</group>
+				<key>play</key>
+                <description>Deck 2: Play button</description>
+                <status>0x91</status>
+                <midino>0x0B</midino>
+                <on>0x7F</on>
+                <off>0x00</off>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel1]</group>
+                <key>sync_enabled</key>
+                <description>Deck 2: Tap to sync tempo (and phase with quantize enabled), hold to enable permanent sync</description>
+                <status>0x90</status>
+                <midino>0x58</midino>
+                <on>0x7F</on>
+                <off>0x00</off>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel2]</group>
+                <key>sync_enabled</key>
+                <description>Deck 2: Tap to sync tempo (and phase with quantize enabled), hold to enable permanent sync</description>
+                <status>0x91</status>
+                <midino>0x58</midino>
+                <on>0x7F</on>
+                <off>0x00</off>
+                <minimum>0.5</minimum>
+            </output>
+        </outputs>
+
     </controller>
 </MixxxControllerPreset>
