@@ -2,7 +2,7 @@
 <MixxxControllerPreset schemaVersion="1" mixxxVersion="2.0.0+">
     <info>
         <name>Pioneer DDJ-200</name>
-        <author>Dan Giddins</author>
+        <author>Dan Giddins, Frank Breitling</author>
         <description>Pioneer DDJ-200 configuration for 2 decks.</description>
     </info>
     <controller id="DDJ-200">
@@ -355,16 +355,6 @@
                 </options>
             </control>
             <control>
-                <group>[Channel1]</group>
-                <key>hotcue_1_activate</key>
-                <description>Deck 1: Set, preview from or jump to hotcue 1</description>
-                <status>0x97</status>
-                <midino>0x00</midino>
-                <options>
-                    <normal/>
-                </options>
-            </control>
-            <control>
                 <group>[Channel2]</group>
                 <key>pfl</key>
                 <description>Deck 2: Headphone listen (pfl) button</description>
@@ -402,6 +392,16 @@
                 <midino>0x0B</midino>
                 <options>
                     <fourteen-bit-msb/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>hotcue_1_activate</key>
+                <description>Deck 1: Set, preview from or jump to hotcue 1</description>
+                <status>0x97</status>
+                <midino>0x00</midino>
+                <options>
+                    <normal/>
                 </options>
             </control>
             <control>
@@ -837,6 +837,252 @@
                 </options>
             </control>
         </controls>
-        <outputs/>
-    </controller>
+
+        <outputs>
+            <output>
+                <group>[Channel1]</group>
+		<key>play</key>
+                <description>Deck 1: Play LED</description>
+                <status>0x90</status>
+                <midino>0x0B</midino>
+                <on>0x7F</on>
+                <off>0x00</off>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel2]</group>
+		<key>play</key>
+                <description>Deck 2: Play LED</description>
+                <status>0x91</status>
+                <midino>0x0B</midino>
+                <on>0x7F</on>
+                <off>0x00</off>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel1]</group>
+                <key>sync_enabled</key>
+                <description>Deck 2: Beat sync LED</description>
+                <status>0x90</status>
+                <midino>0x58</midino>
+                <on>0x7F</on>
+                <off>0x00</off>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel2]</group>
+                <key>sync_enabled</key>
+                <description>Deck 2: Beat sync LED</description>
+                <status>0x91</status>
+                <midino>0x58</midino>
+                <on>0x7F</on>
+                <off>0x00</off>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel1]</group>
+                <key>cue_default</key>
+                <description>Deck 1: Cue LED</description>
+                <status>0x90</status>
+                <midino>0x0C</midino>
+                <on>0x7F</on>
+                <off>0x00</off>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel2]</group>
+                <key>cue_default</key>
+                <description>Deck 2: Cue LED</description>
+                <status>0x91</status>
+                <midino>0x0C</midino>
+                <on>0x7F</on>
+                <off>0x00</off>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel1]</group>
+                <key>pfl</key>
+                <description>Deck 1: Headphone listen (pfl) LED</description>
+                <status>0x90</status>
+                <midino>0x54</midino>
+                <on>0x7F</on>
+                <off>0x00</off>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel2]</group>
+                <key>pfl</key>
+                <description>Deck 2: Headphone listen (pfl) LED</description>
+                <status>0x91</status>
+                <midino>0x54</midino>
+                <on>0x7F</on>
+                <off>0x00</off>
+                <minimum>0.5</minimum>
+            </output>
+
+            
+            <output>
+                <group>[Channel1]</group>
+                <key>hotcue_1_enabled</key>
+                <description>Deck 1: hotcue 1 LED</description>
+                <status>0x97</status>
+                <midino>0x00</midino>
+                <on>0x7F</on>
+                <off>0x00</off>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel1]</group>
+                <key>hotcue_2_enabled</key>
+                <description>Deck 1: hotcue 2 LED</description>
+                <status>0x97</status>
+                <midino>0x01</midino>
+                <on>0x7F</on>
+                <off>0x00</off>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel1]</group>
+                <key>hotcue_3_enabled</key>
+                <description>Deck 1: hotcue 3 LED</description>
+                <status>0x97</status>
+                <midino>0x02</midino>
+                <on>0x7F</on>
+                <off>0x00</off>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel1]</group>
+                <key>hotcue_4_enabled</key>
+                <description>Deck 1: hotcue 4 LED</description>
+                <status>0x97</status>
+                <midino>0x03</midino>
+                <on>0x7F</on>
+                <off>0x00</off>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel1]</group>
+                <key>hotcue_5_enabled</key>
+                <description>Deck 1: hotcue 5 LED</description>
+                <status>0x97</status>
+                <midino>0x04</midino>
+                <on>0x7F</on>
+                <off>0x00</off>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel1]</group>
+                <key>hotcue_6_enabled</key>
+                <description>Deck 1: hotcue 6 LED</description>
+                <status>0x97</status>
+                <midino>0x05</midino>
+                <on>0x7F</on>
+                <off>0x00</off>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel1]</group>
+                <key>hotcue_7_enabled</key>
+                <description>Deck 1: hotcue 7 LED</description>
+                <status>0x97</status>
+                <midino>0x06</midino>
+                <on>0x7F</on>
+                <off>0x00</off>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel1]</group>
+                <key>hotcue_8_enabled</key>
+                <description>Deck 1: hotcue 8 LED</description>
+                <status>0x97</status>
+                <midino>0x07</midino>
+                <on>0x7F</on>
+                <off>0x00</off>
+                <minimum>0.5</minimum>
+            </output>
+
+            <output>
+                <group>[Channel2]</group>
+                <key>hotcue_1_enabled</key>
+                <description>Deck 2: hotcue 1 LED</description>
+                <status>0x99</status>
+                <midino>0x00</midino>
+                <on>0x7F</on>
+                <off>0x00</off>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel2]</group>
+                <key>hotcue_2_enabled</key>
+                <description>Deck 2: hotcue 2 LED</description>
+                <status>0x99</status>
+                <midino>0x01</midino>
+                <on>0x7F</on>
+                <off>0x00</off>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel2]</group>
+                <key>hotcue_3_enabled</key>
+                <description>Deck 2: hotcue 3 LED</description>
+                <status>0x99</status>
+                <midino>0x02</midino>
+                <on>0x7F</on>
+                <off>0x00</off>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel2]</group>
+                <key>hotcue_4_enabled</key>
+                <description>Deck 2: hotcue 4 LED</description>
+                <status>0x99</status>
+                <midino>0x03</midino>
+                <on>0x7F</on>
+                <off>0x00</off>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel2]</group>
+                <key>hotcue_5_enabled</key>
+                <description>Deck 2: hotcue 5 LED</description>
+                <status>0x99</status>
+                <midino>0x04</midino>
+                <on>0x7F</on>
+                <off>0x00</off>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel2]</group>
+                <key>hotcue_6_enabled</key>
+                <description>Deck 2: hotcue 6 LED</description>
+                <status>0x99</status>
+                <midino>0x05</midino>
+                <on>0x7F</on>
+                <off>0x00</off>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel2]</group>
+                <key>hotcue_7_enabled</key>
+                <description>Deck 2: hotcue 7 LED</description>
+                <status>0x99</status>
+                <midino>0x06</midino>
+                <on>0x7F</on>
+                <off>0x00</off>
+                <minimum>0.5</minimum>
+            </output>
+            <output>
+                <group>[Channel2]</group>
+                <key>hotcue_8_enabled</key>
+                <description>Deck 2: hotcue 8 LED</description>
+                <status>0x99</status>
+                <midino>0x07</midino>
+                <on>0x7F</on>
+                <off>0x00</off>
+                <minimum>0.5</minimum>
+            </output>
+
+          </outputs>
+      </controller>
 </MixxxControllerPreset>
