@@ -872,7 +872,7 @@
             <output>
                 <group>[Channel1]</group>
                 <key>sync_enabled</key>
-                <description>Deck 2: Beat sync LED</description>
+                <description>Deck 1: Beat sync LED</description>
                 <status>0x90</status>
                 <midino>0x58</midino>
                 <on>0x7F</on>
