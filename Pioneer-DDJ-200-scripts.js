@@ -1,6 +1,5 @@
 var DDJ200 = {
- headMix_val : 0,
- headMix_LED : 0x00
+ headMix_switch : 0
 };
 
 DDJ200.init = function () {};
@@ -45,11 +44,10 @@ DDJ200.seek = function (channel, control, value, status, group) {
 
 DDJ200.headmix = function (channel, control, value, status, group) {
     if (value == 0) { return; }
-    DDJ200.headMix_val = 1 - DDJ200.headMix_val;
-    engine.setValue("[Master]", "headMix", 2 * DDJ200.headMix_val - 1);
+    DDJ200.headMix_switch = 1 - DDJ200.headMix_switch;
+    engine.setValue("[Master]", "headMix", 2 * DDJ200.headMix_switch - 1);
     // headMix knob has values from -1 to 1
 
-    DDJ200.headMix_LED = 0x7F - DDJ200.headMix_LED;
-    midi.sendShortMsg(0x90+channel, control, DDJ200.headMix_LED);  // headMix
-    //midi.sendShortMsg(0x96, 0x63, 0x7F);  // headMix button
+    midi.sendShortMsg(0x90+channel, control, 0x7F * DDJ200.headMix_switch);
+    //midi.sendShortMsg(0x96, 0x63, 0x7F);  // headMix switch
 };
