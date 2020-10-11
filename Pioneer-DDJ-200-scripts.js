@@ -45,9 +45,9 @@ DDJ200.seek = function (channel, control, value, status, group) {
 DDJ200.headmix = function (channel, control, value, status, group) {
     if (value == 0) { return; }
     DDJ200.headMix_switch = 1 - DDJ200.headMix_switch;
+    // toggle headMix knob to values of -1 and 1
     engine.setValue("[Master]", "headMix", 2 * DDJ200.headMix_switch - 1);
-    // headMix knob has values from -1 to 1
-
+    
+    // now switch headMix LED with midi.sendShortMsg(0x96, 0x63, 0x7F or 0);
     midi.sendShortMsg(0x90+channel, control, 0x7F * DDJ200.headMix_switch);
-    //midi.sendShortMsg(0x96, 0x63, 0x7F);  // headMix switch
 };
