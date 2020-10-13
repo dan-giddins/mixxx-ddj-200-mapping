@@ -26,10 +26,12 @@ DDJ200.touch = function (channel, control, value, status, group) {
     var deckNumber = script.deckFromGroup(group);
     if (value == 0) {
         // disable scratch
-        DDJ200.jog_disabled = true; // disable jog to not stop alignment   
+       if(engine.getValue(group, "sync_enabled") == true)
+            DDJ200.jog_disabled = true; //disable jog to not prevent alignment
         engine.scratchDisable(deckNumber);
-        // enable jog again after 900 ms when jog wheel has stopped
-        engine.beginTimer(900, "DDJ200.jog_disabled = false;", true);
+        // enable jog again after 900 ms when jog wheel has stopped spinning   
+        if(engine.getValue(group, "sync_enabled") == true)
+            engine.beginTimer(900, "DDJ200.jog_disabled = false;", true);
     } else {
         // enable scratch
         var alpha = 1.0 / 8;
