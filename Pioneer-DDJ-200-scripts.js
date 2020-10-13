@@ -1,5 +1,6 @@
 var DDJ200 = {
- headMix_switch : 0
+ headMix_switch : 0,
+ jog_disabled : false
 };
 
 DDJ200.init = function () {};
@@ -13,23 +14,22 @@ DDJ200.scratch = function (channel, control, value, status, group) {
     engine.scratchTick(script.deckFromGroup(group), value - 64);
 };
 
-DDJ200.jog1 = function (channel, control, value, status, group) {
+DDJ200.jog = function (channel, control, value, status, group) {
     // For a control that centers on 0x40 (64):
     // Convert value down to +1/-1
     // Register the movement
+    if (DDJ200.jog_disabled) { return; }
     engine.setValue(group, 'jog', value - 64);
 };
-
-DDJ200.jog = DDJ200.jog1;
 
 DDJ200.touch = function (channel, control, value, status, group) {
     var deckNumber = script.deckFromGroup(group);
     if (value == 0) {
         // disable scratch
-        DDJ200.jog = function () {}; // disable nudging to not prevent alignment
+        DDJ200.jog_disabled = true; // disable jog to not stop alignment   
         engine.scratchDisable(deckNumber);
-        // enable nudging again after 900 ms when jog wheel has stopped
-        engine.beginTimer(900, "DDJ200.jog = DDJ200.jog1;", true);
+        // enable jog again after 900 ms when jog wheel has stopped
+        engine.beginTimer(900, "DDJ200.jog_disabled = false;", true);
     } else {
         // enable scratch
         var alpha = 1.0 / 8;
