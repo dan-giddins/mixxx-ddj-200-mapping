@@ -18,7 +18,7 @@ DDJ200.jog = function (channel, control, value, status, group) {
     // For a control that centers on 0x40 (64):
     // Convert value down to +1/-1
     // Register the movement
-    if (DDJ200.jog_disabled) { return; }
+    if (DDJ200.jog_disabled[deckNumber]) { return; }
     engine.setValue(group, 'jog', value - 64);
 };
 
