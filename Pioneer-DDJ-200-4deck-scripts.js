@@ -1,7 +1,7 @@
 var DDJ200 = {
  headMix_switch : 0,
- vDeck : new Array(1, 2),
- jog_disabled : new Array (false, false, false, false)
+ vDeck : new Array(0, 1, 2),
+ jog_disabled : new Array(false, false, false, false, false)
 };
 
 DDJ200.init = function () {
@@ -23,7 +23,7 @@ DDJ200.jog = function (channel, control, value, status, group) {
     // Convert value down to +1/-1
     // Register the movement
     var deckNumber = script.deckFromGroup(group);
-    if (DDJ200.jog_disabled[deckNumber-1]) { return; }
+    if (DDJ200.jog_disabled[deckNumber]) { return; }
     engine.setValue(group, 'jog', value - 64);
 };
 
@@ -31,14 +31,11 @@ DDJ200.jog = function (channel, control, value, status, group) {
 DDJ200.touch = function (channel, control, value, status, group) {
     var deckNumber = script.deckFromGroup(group);
     if (value === 0) {
+        // disable jog to not prevent alignment and enable it after 900 ms
+        DDJ200.jog_disabled[deckNumber] = true;
+        engine.beginTimer(900, "DDJ200.jog_disabled["+deckNumber+"] = false;",
+                          true);
         // disable scratch
-        if(engine.getValue(group, "sync_enabled") == true) {
-            // disable jog to not prevent alignment
-            DDJ200.jog_disabled[deckNumber-1] = true;
-            // and enable it after 900 ms again
-            engine.beginTimer(900, "DDJ200.jog_disabled[" +
-                              (deckNumber-1) + "] = false;", true);
-        }
         engine.scratchDisable(deckNumber);
     } else {
         // enable scratch
@@ -68,10 +65,9 @@ DDJ200.headmix = function (channel, control, value, status, group) {
 };
 
 DDJ200.play = function (channel, control, value, status, group) {
-     if (value === 0) { return; }
+    if (value === 0) { return; }
     deckNumber = script.deckFromGroup(group);
-    if (deckNumber == 1) { vgroup = "[Channel" + DDJ200.vDeck[(deckNumber-1)] +"]"; }
-    else { vgroup = "[Channel" + DDJ200.vDeck[(deckNumber-1)] +"]"; }
+    else { vgroup = "[Channel" + DDJ200.vDeck[deckNumber] +"]"; }
 
     //print(channel);
     //print(0x90+channel);
@@ -109,14 +105,14 @@ DDJ200.deck_toggle = function (channel, control, value, status, group) {
 
     LED = 0x7F;
     if (deckNumber == 1) {
-        DDJ200.vDeck[0] = 4 - DDJ200.vDeck[0];
-        if (DDJ200.vDeck[0] == 1) LED = 0;
-        vgroup = "[Channel" + DDJ200.vDeck[0] +"]";
+        DDJ200.vDeck[1] = 4 - DDJ200.vDeck[1];
+        if (DDJ200.vDeck[1] == 1) LED = 0;
+        vgroup = "[Channel" + DDJ200.vDeck[1] +"]";
     }
     else { // deckNumber == 2
-        DDJ200.vDeck[1] = 6 - DDJ200.vDeck[1];
-        if (DDJ200.vDeck[1] == 2) LED = 0;
-        vgroup = "[Channel" + DDJ200.vDeck[1] +"]";
+        DDJ200.vDeck[2] = 6 - DDJ200.vDeck[2];
+        if (DDJ200.vDeck[2] == 2) LED = 0;
+        vgroup = "[Channel" + DDJ200.vDeck[2] +"]";
     }
     
     //print(channel-7);
