@@ -19,7 +19,7 @@ DDJ200.init = function () {
         engine.connectControl(vgroup, "track_loaded", "DDJ200.onTrackLoad");
         // set Pioneer CDJ cue mode for all decks
         // engine.setValue(vgroup, "cue_cdj", true);
-    }
+    };
 
     DDJ200.LEDs_off();
 
@@ -40,7 +40,7 @@ DDJ200.LEDs_off = function () {                       // trun off LEDs:
         for (var j = 0; j <= 8; j++) {
             midi.sendShortMsg(0x97 + 2 * i, j, 0x00); // hotcue buttons
         }
-    }
+    };
 };
 
 DDJ200.onTrackLoad = function (channel, vgroup, value) {
@@ -71,12 +71,13 @@ DDJ200.browseTracks = function (value) {
     }
 };
 
-DDJ200.shiftLeft = function (channel, control, value, status, group) {
+DDJ200.shiftLeft = function () {
     // toggle shift left pressed variable
     DDJ200.shiftPressed["left"] = ! DDJ200.shiftPressed["left"];
 };
 
-DDJ200.shiftRight = function (channel, control, value, status, group) {
+DDJ200.shiftRight = function () {
+    // toggle shift right pressed variable
     DDJ200.shiftPressed["right"] = ! DDJ200.shiftPressed["right"];
 };
 
@@ -90,7 +91,7 @@ DDJ200.jog = function (channel, control, value, status, group) {
           if (DDJ200.vDeck[vDeckNo]["jog_disabled"]) { return; }
           var vgroup = "[Channel" + vDeckNo +"]";
           engine.setValue(vgroup, "jog", value - 64);
-    }
+    };
 };
 
 DDJ200.scratch = function (channel, control, value, status, group) {
@@ -130,7 +131,7 @@ DDJ200.seek = function (channel, control, value, status, group) {
     engine.setValue(vgroup, "playposition", newPos); // Strip search
 };
 
-DDJ200.headmix = function (channel, control, value, status, group) {
+DDJ200.headmix = function (channel, control, value) {
     // toggle headMix knob between -1 to 1
     if (! value ) { return; }  // do not execute if button is released
     DDJ200.headMix_switch = 1 - DDJ200.headMix_switch;
@@ -138,7 +139,7 @@ DDJ200.headmix = function (channel, control, value, status, group) {
     midi.sendShortMsg(0x96, 0x63, 0x7F * DDJ200.headMix_switch); //headMix LED
 };
 
-DDJ200.toggle_fourDeckMode = function (channel, control, value, status, group) {
+DDJ200.toggle_fourDeckMode = function (channel, control, value) {
     if (! value ) { return; }  // do not execute if button is released
     DDJ200.fourDeckMode = ! DDJ200.fourDeckMode;
     if (DDJ200.fourDeckMode) {
@@ -264,9 +265,10 @@ DDJ200.cue_gotoandstop = function (channel, control, value, status, group) {
 DDJ200.hotcue_N_activate = function (channel, control, value, status, group) {
     var vDeckNo = DDJ200.vDeckNo[script.deckFromGroup(group)];
     var vgroup = "[Channel" + vDeckNo +"]";
-    engine.setValue(vgroup, "hotcue_" + (control + 1) + "_activate", true);
-    midi.sendShortMsg(status, control, 0x7F * engine.getValue
-                      (vgroup, "hotcue_" + (control + 1) + "_enabled"));
+    var hotcue = "hotcue_" + (control + 1);
+    engine.setValue(vgroup, hotcue + "_activate", true);
+    midi.sendShortMsg(status, control,
+                      0x7F * engine.getValue(vgroup, hotcue + "_enabled"));
     var deckNo = script.deckFromGroup(group);
     midi.sendShortMsg(0x90 + deckNo - 1, 0x0B, 0x7F *
                       engine.getValue(vgroup, "play")); // set play LED
@@ -288,7 +290,7 @@ DDJ200.pfl = function (channel, control, value, status, group) {
     engine.setValue(vgroup, "pfl", pfl);
     if (DDJ200.fourDeckMode == false) {
         midi.sendShortMsg(status, 0x54, 0x7F * pfl);  // switch pfl LED
-    }
+    };
 };
 
 DDJ200.switch_LEDs = function (vDeckNo) {
@@ -309,7 +311,7 @@ DDJ200.switch_LEDs = function (vDeckNo) {
     for (var i = 1; i <= 8; i++) {
         midi.sendShortMsg(0x90 + c, i - 1, 0x7F * engine.getValue(
                           vgroup, "hotcue_" + i + "_enabled"));
-    }
+    };
 };
 
 DDJ200.deck_toggle = function (channel, control, value, status, group) {
