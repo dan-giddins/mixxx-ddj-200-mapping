@@ -19,7 +19,7 @@ DDJ200.init = function () {
         engine.connectControl(vgroup, "track_loaded", "DDJ200.onTrackLoad");
         // set Pioneer CDJ cue mode for all decks
         // engine.setValue(vgroup, "cue_cdj", true);
-    };
+    }
 
     DDJ200.LEDs_off();
 
@@ -40,7 +40,7 @@ DDJ200.LEDs_off = function () {                       // trun off LEDs:
         for (var j = 0; j <= 8; j++) {
             midi.sendShortMsg(0x97 + 2 * i, j, 0x00); // hotcue buttons
         }
-    };
+    }
 };
 
 DDJ200.onTrackLoad = function (channel, vgroup) {
@@ -91,7 +91,7 @@ DDJ200.jog = function (channel, control, value, status, group) {
           if (DDJ200.vDeck[vDeckNo]["jog_disabled"]) { return; }
           var vgroup = "[Channel" + vDeckNo +"]";
           engine.setValue(vgroup, "jog", value - 64);
-    };
+    }
 };
 
 DDJ200.scratch = function (channel, control, value, status, group) {
@@ -290,7 +290,7 @@ DDJ200.pfl = function (channel, control, value, status, group) {
     engine.setValue(vgroup, "pfl", pfl);
     if (DDJ200.fourDeckMode == false) {
         midi.sendShortMsg(status, 0x54, 0x7F * pfl);  // switch pfl LED
-    };
+    }
 };
 
 DDJ200.switch_LEDs = function (vDeckNo) {
@@ -311,7 +311,7 @@ DDJ200.switch_LEDs = function (vDeckNo) {
     for (var i = 1; i <= 8; i++) {
         midi.sendShortMsg(0x90 + c, i - 1, 0x7F * engine.getValue(
                           vgroup, "hotcue_" + i + "_enabled"));
-    };
+    }
 };
 
 DDJ200.deck_toggle = function (channel, control, value, status, group) {
