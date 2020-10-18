@@ -2,7 +2,7 @@
 <MixxxControllerPreset schemaVersion="1" mixxxVersion="2.0.0+">
     <info>
         <name>Pioneer DDJ-200 (4D, v1.0)</name>
-        <author>Frank.Breitling at gmx.de, Dan Giddins</author>
+        <author>Dan Giddins, Frank.Breitling at gmx.de</author>
         <description>Pioneer DDJ-200 mapping for 4 decks</description>
     </info>
     <controller id="DDJ-200">
@@ -202,7 +202,7 @@
                 </options>
             </control>
 
-            
+
             <control>
                 <group>[EqualizerRack1_[Channel1]_Effect1]</group>
                 <!--key>parameter1</key-->
@@ -453,7 +453,7 @@
             <control>
                 <group>[Channel1]</group>
                 <!--key>cue_default</key-->
-                <key>DDJ200.cue_default</key>                
+                <key>DDJ200.cue_default</key>
                 <description>Deck 1: Cue button</description>
                 <status>0x90</status>
                 <midino>0x0C</midino>
@@ -931,7 +931,7 @@
             </control>
         </controls>
 
-        
+
         <outputs>
             <!--output>
                 <group>[Channel1]</group>
