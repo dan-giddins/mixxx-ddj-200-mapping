@@ -33,8 +33,8 @@ DDJ200.init = function() {
         engine.makeConnection(vgroup, "sync_enabled", function(ch, vgroup) {
             DDJ200.updateDeckLeds(vgroup);
         });
-		
-        DDJ200.listemHotcues(vgroup)
+
+        DDJ200.listemHotcues(vgroup);
 
         // set Pioneer CDJ cue mode for all decks
         engine.setValue(vgroup, "cue_cdj", true);
@@ -55,7 +55,7 @@ DDJ200.listemHotcues = function(vgroup) {
             DDJ200.updateDeckLeds(vgroup);
         });
     }
-}
+};
 
 DDJ200.shutdown = function() {
     DDJ200.LEDsOff();
@@ -351,7 +351,7 @@ DDJ200.switchLEDs = function(vDeckNo) {
             0x7F * engine.getValue(vgroup, "pfl"));
     }
 
-    DDJ200.switchHotcueLEDs(vDeckNo)
+    DDJ200.switchHotcueLEDs(vDeckNo);
 };
 
 DDJ200.switchHotcueLEDs = function(vDeckNo) {
@@ -361,7 +361,7 @@ DDJ200.switchHotcueLEDs = function(vDeckNo) {
         midi.sendShortMsg(0x97 + 2 * d, i - 1, 0x7F * engine.getValue(
             vgroup, "hotcue_" + i + "_enabled"));
     }
-}
+};
 
 DDJ200.toggleDeck = function(channel, control, value, status, group) {
     if (value) { // only if button pressed, not releases, i.e. value === 0
